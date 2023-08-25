@@ -44,7 +44,53 @@
             </li>
     
         </ul>
+
+    <button
+    class="menu-toggle js-open-menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu">
+    <svg class="menu-icon" width="32" height="32">
+      <use href="./images/icons.svg#hamburger-open"></use>
+    </svg>
+  </button>
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle hamburger-close-button js-close-menu">
+      <svg class="menu-icon" width="32" height="32">
+        <use href="./images/icons.svg#hamburger-close"></use>
+      </svg>
+    </button>
+
+    <ul class="menu-navigation-list list">
+        <li class="menu-navigation-item"><a class="menu-navigation-link link" rel="noreffer noopener" href="./index.html">Studio</a></li>
+        <li class="menu-navigation-item"><a class="menu-navigation-link link mobile-current-page" rel="noreffer noopener" href="./portfolio.html">Portfolio</a></li>
+        <li class="menu-navigation-item"><a class="menu-navigation-link link" href="#">Contacts</a></li>
+    </ul>
+
+    <ul class="menu-contact-list list">
+        <li class="menu-contact-item">
+            <a class="menu-contact-link menu-contact-link-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li class="menu-contact-item">
+            <a class="menu-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+    </ul>
+    <ul class="menu-social-list list">
+        <li class="social-item item"><a class="social-link link" href="#"><svg class="social-icon" width="16" height="16"><use href="./images/icons.svg#instagram"></use></svg>
+        </a>
+        </li>
+        <li class="social-item item"><a class="social-link link" href="#"><svg class="social-icon" width="16" height="16"><use href="./images/icons.svg#twitter"></use></svg>
+        </a>
+        </li>
+        <li class="social-item item"><a class="social-link link" href="#"><svg class="social-icon" width="16" height="16"><use href="./images/icons.svg#facebook"></use></svg>
+        </a>
+        </li>
+        <li class="social-item item"><a class="social-link link" href="#"><svg class="social-icon" width="16" height="16"><use href="./images/icons.svg#linkedin"></use></svg>
+        </a>
+        </li>
+     </ul>
     </div>
+    </div>
+    
     </header>
 
 
@@ -193,7 +239,7 @@
        </div>
         <div class="footer-social-link-wrapper">
             <h3 class="footer-social-heading">Social Media</h3>
-            <ul class="footer-social-list list">
+            <ul class="footer-social-list">
                 <li class="footer-social-item item"><a class="footer-social-link link" href="#"><svg class="social-icon" width="24" height="24"><use href="./images/icons.svg#instagram"></use></svg>
                 </a>
                 </li>
@@ -210,7 +256,7 @@
         </div>
         <form class="footer-form" name="subscribe-form" autocomplete="on" method="" >
             <label class="footer-form-label">
-                Subscribe
+                <span class="subscribe-text">Subscribe</span>
                 <input type="email" name="email" placeholder="E-mail" class="footer-form-input" required />
             </label>
         
@@ -222,6 +268,71 @@
         </form>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="modal-close" data-modal-close>
+            <svg class="modal-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+       
+       
+            <h2 class="form-header">Leave your contacts and we will call you back</h2>
+
+            <form name="modal-form" autocomplete="on" class="form-container"  method="">
+            
+            <label class="form-label">
+                                    
+                <span class="form-label-text">Name </span>
+                <input type="text" class="form-input" name="name" required />
+                <svg class="form-input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-name"></use>
+                </svg> 
+                
+            </label>
+
+            <label class="form-label">
+                                    
+                <span class="form-label-text">Phone </span>
+                <input type="tel" class="form-input" name="phone" required />
+                <svg class="form-input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+                </svg> 
+                
+            </label>
+
+            <label class="form-label">
+                                    
+                <span class="form-label-text">Email </span>
+                <input type="email" class="form-input" name="email" required />
+                <svg class="form-input-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email"></use>
+                </svg> 
+                
+            </label>
+            <label class="form-label-textarea">
+                <span class="form-label-textarea-text">Comment</span>
+                <textarea name="comment" class="form-textarea" placeholder="Text input" required></textarea>
+            </label>
+
+            <label class="form-label-agreement">
+                <input type="checkbox" value="agree" name="agreement" class="checkbox" required />
+                <span class="checkbox-icon">
+                    <svg class="check-mark" width="10" height="10">
+                        <use href="./images/icons.svg#check-mark"></use>
+                    </svg>
+                </span>
+                <span class="span-agreement">I accept the terms and conditions of the <a href="#" class="agreement-link" >Privacy Policy</a>
+                </span>
+            </label>
+
+            <button type="submit" class="form-button">Send</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="./modal.js"></script>
+    <script src="./mobile-menu.js"></script>
 </body>
 
 </html>
